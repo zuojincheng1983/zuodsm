@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 引入外部jQuery库及插件 -->
+    <script src="./lib/jquery-1.12.4.min.js"></script>
+    <script src="./lib/colorizer.js"></script>
+    <script src="./lib/audioplayer.js"></script>
+    <!-- 引入外部CSS库 -->
+    <link rel="stylesheet" href="./css/colorizer.css">
+    <link rel="stylesheet" href="./css/audioplayer.css">
+    <!-- 引入自定义CSS -->
+    <link rel="stylesheet" href="./css/player.css">
+    <title>黑胶播放器</title>
+</head>
+
+<body>
+    <!-- 黑胶唱片效果 -->
+    <div class="audio">
+        <div class="disk"></div>
+        <img class="cover" src="./img/0.jpg">
+        <!-- 播放列表 -->
+        <div class="playlist">
+            <h2>音乐列表</h2>
+            <h4>Play List</h4>
+            <!-- 测试数据 -->
+            <ul>
+                <li>
+                    <a href="javascript:">
+                        <img src="./img/0.jpg" alt="">
+                        4 Non Blondes - What's Up？
+                        <span class="del">×</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:">
+                        <img src="./img/1.jpg" alt="">
+                        南征北战 - 我的天空
+                        <span class="del">×</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:">
+                        <img src="./img/2.jpg" alt="">
+                        Laura Pausini - Un'emergenza d'Amore
+                        <span class="del">×</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:">
+                        <img src="./img/3.jpg" alt="">
+                        Whitney Houston,Mariah Carey - When You Believe
+                        <span class="del">×</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- 测试数据 -->
+        </div>
+    </div>
+    <!-- 音乐播放器 -->
+    <div id="player">
+        <audio id="mypalyer" src="./mp3/0.mp3" preload="auto" controls autoplay></audio>
+    </div>
+</body>
+<script>
+    // 加载播放插件
+    $(function () {
+        $('audio').audioPlayer();
+    }
+    );
+</script>
+<!-- 引入自定义播放列表脚本 -->
+<script src="./js/playlist.js"></script>
+
+</html>
