@@ -1,4 +1,4 @@
-// 新版chrome禁止了自动b播放
+// 新版chrome禁止了自动播放
 $('.playlist li').click(function () {
     var cover = './img/' + $(this).index() + '.jpg';
     var music = './mp3/' + $(this).index() + '.mp3';
